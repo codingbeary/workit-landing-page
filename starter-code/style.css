@@ -1,6 +1,38 @@
 header {
   background: #24053e;
 }
+header span {
+  color: white;
+  font-size: 18px;
+}
 h1 {
   text-align: center;
+
+  padding: 5%;
+}
+main {
+  color: white;
+  max-width: 100%;
+}
+
+/* .image1 {
+  position: absolute;
+  float: left;
+  left: -10%;
+}
+.image2 {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.background-img {
+  position: absolute;
+  z-index: -1;
 }
