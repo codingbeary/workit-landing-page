@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+
 header {
   background: #24053e;
 }
@@ -5,17 +15,56 @@ header span {
   color: white;
   font-size: 18px;
 }
-h1 {
+h1,
+h2 {
   text-align: center;
-
-  padding: 5%;
+  font-family: "Fraunces";
 }
-main {
+h1 {
+  font-size: 80px;
+  padding: 20px 400px;
+}
+h2 {
+  padding-top: 40px;
+}
+header section {
   color: white;
   max-width: 100%;
+  background-color: #24053e;
+  background-image: url(./assets/images/bg-pattern-1.svg),
+    url(./assets/images/bg-pattern-2.svg);
+  background-repeat: no-repeat;
+  background-position: top 7.25rem right 86vw, top 19.625rem left 91.3vw;
+  text-align: center;
+}
+section a {
+  background-color: #44ffa1;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
 }
 
-.assets {
+section.features {
+  padding-top: 20%;
+  background-color: #fcf8ff;
+}
+section.features span {
+  border: 1px solid black;
+  padding: 20px 25px;
+  border-radius: 100%;
+  font-family: "Fraunces";
+}
+.hero__curve {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+}
+.hero__curve path {
+  fill: hsl(273, 85%, 13%);
+}
+
+.features {
   display: flex;
   text-align: center;
 }
@@ -23,6 +72,9 @@ main {
   max-width: 60%;
   display: block;
   margin: 0 auto;
+  position: relative;
+  top: 200px;
+  z-index: 2;
 }
 .founderImage {
   max-width: 40%;
@@ -34,15 +86,4 @@ main {
 .flex {
   display: flex;
   justify-content: space-between;
-}
-.background-img {
-  position: absolute;
-  z-index: -1;
-  padding-bottom: 20%;
-  background-color: #fcf8ff;
-}
-.backgroundPink {
-  z-index: -2;
-  position: absolute;
-  max-width: 100%;
 }
