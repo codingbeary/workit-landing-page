@@ -15,19 +15,22 @@ main {
   max-width: 100%;
 }
 
-/* .image1 {
-  position: absolute;
-  float: left;
-  left: -10%;
+.assets {
+  display: flex;
+  text-align: center;
 }
-.image2 {
-  float: right;
+.phoneImage {
+  max-width: 60%;
+  display: block;
+  margin: 0 auto;
 }
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-} */
+.founderImage {
+  max-width: 40%;
+}
+.testing {
+  background-color: #24053e;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -35,4 +38,11 @@ main {
 .background-img {
   position: absolute;
   z-index: -1;
+  padding-bottom: 20%;
+  background-color: #fcf8ff;
+}
+.backgroundPink {
+  z-index: -2;
+  position: absolute;
+  max-width: 100%;
 }
