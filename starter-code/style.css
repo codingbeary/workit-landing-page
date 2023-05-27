@@ -7,16 +7,39 @@ html {
   font-family: "Fraunces";
   src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
 }
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
+}
+
+/* HEADER STYLING */
 
 header {
   background: #24053e;
 }
+nav {
+  padding: 60px 70px;
+}
 header span {
   color: white;
   font-size: 18px;
+  font-family: "Manrope";
+  font-weight: bold;
+  border-bottom: #44ffa1 3px solid;
+  transition: all 160ms ease-in-out;
+}
+header span:hover {
+  color: #44ffa1;
+}
+.underlined {
+  border-bottom: #44ffa1 3px solid;
+  font-family: "Fraunces";
+  font-size: 80px;
+  font-weight: normal;
 }
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
   font-family: "Fraunces";
 }
@@ -42,18 +65,18 @@ section a {
   padding: 20px;
   text-decoration: none;
   color: black;
+  font-family: "Manrope";
+  font-weight: bold;
+}
+.phoneImage {
+  max-width: 60%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 200px;
+  z-index: 2;
 }
 
-section.features {
-  padding-top: 20%;
-  background-color: #fcf8ff;
-}
-section.features span {
-  border: 1px solid black;
-  padding: 20px 25px;
-  border-radius: 100%;
-  font-family: "Fraunces";
-}
 .hero__curve {
   position: absolute;
   width: 100%;
@@ -64,26 +87,72 @@ section.features span {
   fill: hsl(273, 85%, 13%);
 }
 
+/* SECTION FEATURES */
+
+section.features {
+  padding-top: 20%;
+  background-color: #fcf8ff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+section.features span {
+  border: 1px solid #24053e;
+  padding: 20px 25px;
+  border-radius: 100%;
+  font-family: "Fraunces";
+  font-size: 24px;
+}
+
 .features {
   display: flex;
   text-align: center;
 }
-.phoneImage {
-  max-width: 60%;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  top: 200px;
-  z-index: 2;
+section.features p {
+  font-size: 18px;
+  font-family: "Manrope";
+  color: #24053e;
+  line-height: 2;
+}
+
+.features__curve {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -3.125rem;
+  z-index: -1;
+}
+.features__curve path {
+  fill: hsl(276, 100%, 99%);
 }
 .founderImage {
   max-width: 40%;
 }
 .testing {
   background-color: #24053e;
+  color: white;
+  max-width: 60%;
+  height: 90%;
+}
+.testing p {
+  font-family: "Manrope";
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
+}
+
+.testingSection {
+  padding-top: 30px;
+  margin-top: 40px;
+}
+/* FOOTER */
+.darkLogo {
+  display: block;
+  margin: 0 auto;
+}
+.socialMediaIcons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
