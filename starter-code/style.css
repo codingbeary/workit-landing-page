@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 @font-face {
@@ -17,26 +18,28 @@ html {
 header {
   background: #24053e;
 }
+
+/* NAVBAR */
 nav {
-  padding: 60px 70px;
+  padding: 6em 7em;
 }
-header span {
+.applyForAccess {
   color: white;
-  font-size: 18px;
+  font-size: 1.8em;
   font-family: "Manrope";
   font-weight: bold;
-  border-bottom: #44ffa1 3px solid;
   transition: all 160ms ease-in-out;
 }
-header span:hover {
+.applyForAccess:hover {
   color: #44ffa1;
+  cursor: pointer;
 }
+
 .underlined {
   border-bottom: #44ffa1 3px solid;
-  font-family: "Fraunces";
-  font-size: 80px;
-  font-weight: normal;
 }
+
+/* END OF NAVBAR */
 h1,
 h2,
 h3 {
@@ -44,15 +47,12 @@ h3 {
   font-family: "Fraunces";
 }
 h1 {
-  font-size: 80px;
-  padding: 20px 400px;
+  font-size: 8em;
+  padding: 0.5em 0;
 }
-h2 {
-  padding-top: 40px;
-}
+
 header section {
   color: white;
-  max-width: 100%;
   background-color: #24053e;
   background-image: url(./assets/images/bg-pattern-1.svg),
     url(./assets/images/bg-pattern-2.svg);
@@ -62,18 +62,25 @@ header section {
 }
 section a {
   background-color: #44ffa1;
-  padding: 20px;
+  padding: 1em 2em;
   text-decoration: none;
   color: black;
   font-family: "Manrope";
   font-weight: bold;
+  transition: all 220ms ease-in-out;
+  font-size: 1.8em;
+}
+section a:hover {
+  background-color: #24053e;
+  border: 1px solid #44ffa1;
+  color: #44ffa1;
 }
 .phoneImage {
   max-width: 60%;
   display: block;
   margin: 0 auto;
   position: relative;
-  top: 200px;
+  top: 20em;
   z-index: 2;
 }
 
@@ -87,28 +94,37 @@ section a {
   fill: hsl(273, 85%, 13%);
 }
 
+/* END OF HEADER */
+
 /* SECTION FEATURES */
 
 section.features {
-  padding-top: 20%;
+  padding: 25em 10em 10em 10em;
   background-color: #fcf8ff;
-  margin-bottom: 30px;
   text-align: center;
-}
-section.features span {
-  border: 1px solid #24053e;
-  padding: 20px 25px;
-  border-radius: 100%;
-  font-family: "Fraunces";
-  font-size: 24px;
 }
 
-.features {
+h2 {
+  padding: 2em 0 0.5em 0;
+  font-size: 3.2em;
+}
+
+section.features span {
+  border: 1px solid #24053e;
+  padding: 0.5em 0.9em;
+  border-radius: 100%;
+  font-family: "Fraunces";
+  font-size: 2.4em;
+}
+
+.flex-features {
   display: flex;
-  text-align: center;
+  justify-content: space-around;
+  gap: 5em;
+  padding: 0 5em;
 }
 section.features p {
-  font-size: 18px;
+  font-size: 1.8em;
   font-family: "Manrope";
   color: #24053e;
   line-height: 2;
@@ -118,41 +134,55 @@ section.features p {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -3.125rem;
   z-index: -1;
 }
 .features__curve path {
-  fill: hsl(276, 100%, 99%);
+  fill: #fcf8ff;
 }
+
+/* SECTION TESTING */
 .founderImage {
-  max-width: 40%;
+  max-width: 25%;
+  position: relative;
+  z-index: -2;
+}
+h3 {
+  text-align: left;
+  font-size: 5.6em;
+}
+section.lastSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 8em;
+  margin-bottom: 12em;
 }
 .testing {
   background-color: #24053e;
   color: white;
-  max-width: 60%;
-  height: 90%;
+  max-width: 40%;
+  height: 100%;
+  padding: 5em 0 5em 2em;
+  margin-right: 3em;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  align-self: flex-end;
 }
 .testing p {
   font-family: "Manrope";
+  padding: 2em 6em 2em 1em;
+  max-width: 80%;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-.testingSection {
-  padding-top: 30px;
-  margin-top: 40px;
-}
 /* FOOTER */
 .darkLogo {
   display: block;
   margin: 0 auto;
+  padding: 4em;
 }
 .socialMediaIcons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 2em;
+  padding-bottom: 6em;
 }
