@@ -23,6 +23,10 @@ header {
 nav {
   padding: 6em 7em;
 }
+.flex-navbar {
+  display: flex;
+  justify-content: space-between;
+}
 .applyForAccess {
   color: white;
   font-size: 1.8em;
@@ -140,9 +144,33 @@ section.features p {
   fill: #fcf8ff;
 }
 
+@media (max-width: 960px) {
+  .flex-features {
+    flex-direction: column;
+    text-align: left;
+    padding: 0;
+  }
+  .feature h2 {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5em;
+  }
+  .feature {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    align-items: center;
+  }
+  .feature span {
+    margin-right: 40px;
+  }
+}
+
 /* SECTION TESTING */
 .founderImage {
   max-width: 25%;
+  height: 25%;
   position: relative;
   z-index: -2;
 }
@@ -150,35 +178,69 @@ h3 {
   text-align: left;
   font-size: 5.6em;
 }
+
 section.lastSection {
+  position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 8em;
+  margin-top: 12em;
   margin-bottom: 12em;
+  overflow: hidden;
+  padding-bottom: 10em;
 }
+
 .testing {
+  position: relative;
   background-color: #24053e;
   color: white;
-  max-width: 40%;
+  max-width: 50%;
   height: 100%;
-  padding: 5em 0 5em 2em;
-  margin-right: 3em;
+  padding: 4.5em 6em 5em 4em;
+  margin-right: 1em;
   text-align: left;
-  position: relative;
   z-index: 1;
   align-self: flex-end;
+  margin-top: 14em;
+  background-attachment: fixed;
+}
+
+.lastSection::before {
+  content: "";
+  position: absolute;
+  top: 25em;
+  right: -40em;
+  bottom: -15em;
+  left: 20em;
+  background-image: url("./assets/images/bg-pattern-3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
 }
 .testing p {
   font-family: "Manrope";
-  padding: 2em 6em 2em 1em;
-  max-width: 80%;
+  padding: 1em 4em 2em 0;
+  font-size: 1.8em;
+}
+.item {
+  margin-left: -6em;
+}
+@media (max-width: 960px) {
+  .founderImage {
+    max-width: 30%;
+  }
+  .testing {
+    max-width: 70%;
+  }
+  .lastSection::before {
+    right: -25em;
+  }
 }
 
 /* FOOTER */
 .darkLogo {
   display: block;
   margin: 0 auto;
-  padding: 4em;
+  padding: 0 4em 4em;
 }
 .socialMediaIcons {
   display: flex;
