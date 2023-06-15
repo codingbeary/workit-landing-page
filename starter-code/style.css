@@ -98,11 +98,27 @@ section a:hover {
   fill: hsl(273, 85%, 13%);
 }
 
+@media (max-width: 550px) {
+  nav {
+    padding: 3em;
+  }
+  h1 {
+    font-size: 5em;
+    padding: 1em 0;
+  }
+  .phoneImage {
+    top: 10em;
+  }
+  header section {
+    background-image: none;
+  }
+}
+
 /* END OF HEADER */
 
 /* SECTION FEATURES */
 
-section.features {
+.features {
   padding: 25em 10em 10em 10em;
   background-color: #fcf8ff;
   text-align: center;
@@ -113,12 +129,13 @@ h2 {
   font-size: 3.2em;
 }
 
-section.features span {
+.number {
   border: 1px solid #24053e;
   padding: 0.5em 0.9em;
   border-radius: 100%;
   font-family: "Fraunces";
   font-size: 2.4em;
+  display: inline-block;
 }
 
 .flex-features {
@@ -127,7 +144,7 @@ section.features span {
   gap: 5em;
   padding: 0 5em;
 }
-section.features p {
+.features p {
   font-size: 1.8em;
   font-family: "Manrope";
   color: #24053e;
@@ -152,8 +169,6 @@ section.features p {
   }
   .feature h2 {
     text-align: left;
-    display: flex;
-    justify-content: space-between;
     padding-top: 0.5em;
   }
   .feature {
@@ -162,8 +177,27 @@ section.features p {
     padding: 0;
     align-items: center;
   }
-  .feature span {
+  .number {
     margin-right: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .features {
+    padding: 15em 5em;
+    margin: 0;
+  }
+  .feature {
+    display: block;
+    text-align: center;
+  }
+  .feature h2 {
+    padding-top: 1em;
+    display: block;
+    text-align: center;
+  }
+  .number {
+    margin-right: 0;
   }
 }
 
@@ -179,12 +213,11 @@ h3 {
   font-size: 5.6em;
 }
 
-section.lastSection {
+.lastSection {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 12em;
-  margin-bottom: 12em;
+  margin: 12em 0;
   overflow: hidden;
   padding-bottom: 10em;
 }
@@ -196,11 +229,9 @@ section.lastSection {
   max-width: 50%;
   height: 100%;
   padding: 4.5em 6em 5em 4em;
-  margin-right: 1em;
+  margin: 14em 1em 0 0;
   text-align: left;
   z-index: 1;
-  align-self: flex-end;
-  margin-top: 14em;
   background-attachment: fixed;
 }
 
@@ -233,6 +264,38 @@ section.lastSection {
   }
   .lastSection::before {
     right: -25em;
+  }
+}
+@media (max-width: 550px) {
+  .founderImage {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  h3 {
+    text-align: center;
+    font-size: 3.2em;
+  }
+  .testing p {
+    font-size: 1.6em;
+    text-align: center;
+    padding: 1em 0.5em;
+    margin-bottom: 2em;
+  }
+  .lastSection {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+  }
+
+  .lastSection::before {
+    background-image: none;
+  }
+  .testing {
+    max-width: 90%;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: -4em;
+    text-align: center;
   }
 }
 
